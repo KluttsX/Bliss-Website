@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in & Sign up Form</title>
+  <link rel="stylesheet" href="style1.css" />
+  <script type="module" src="/firebase.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="box">
+      <div class="inner-box">
+        <div class="forms-wrap">
+
+          <form class="sign-in-form">
+            <div class="logo">
+              <img src="/assets/images/logo.svg" alt="easyclass" />
+              <h4>Bliss</h4>
+            </div>
+
+            <div class="heading">
+              <h2>Bienvenido de nuevo</h2>
+              <h6>Todavía no estas registrado?</h6>
+              <a href="#" class="toggle">Registrase</a>
+            </div>
+
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input type="text" minlength="4" id="gmailLogin" class="input-field" autocomplete="on" required />
+                <label>Gmail</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" minlength="4" id="passwordLogin"  class="input-field" autocomplete="on" required />
+                <label>Contraseña</label>
+              </div>
+
+              <input type="submit" id="submitLogin"  value="Iniciar Sesión" class="sign-btn" />
+
+              <p class="text">
+                ¿Olvidó su contraseña o sus datos de inicio de sesión?
+                <a href="#">Obtén ayuda para</a> iniciar sesión
+              </p>
+            </div>
+          </form>
+
+          <form class="sign-up-form">
+            <div class="logo">
+              <img src="/assets/images/logo.svg" alt="easyclass" />
+              <h4>Bliss</h4>
+            </div>
+
+            <div class="heading">
+              <h2>Comenzar</h2>
+              <h6>¿Ya tienes una cuenta?</h6>
+              <a href="#" class="toggle">Iniciar Sesión</a>
+            </div>
+
+            <div class="actual-form">
+              <div class="input-wrap">
+                <input type="user" minlength="4" class="input-field" autocomplete="on" required />
+                <label>Usuario</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="email" id="gmail" class="input-field" autocomplete="on" required />
+                <label>Gmail</label>
+              </div>
+
+              <div class="input-wrap">
+                <input type="password" id="password" minlength="4" class="input-field" autocomplete="off" required />
+                <label>Contraseña</label>
+              </div>
+
+              <input type="submit" id="submit" value="Crear cuenta" class="sign-btn" />
+
+              <p class="text">
+                Al registrarme, acepto las
+                <a href="#">Términos de servicios</a> y
+                <a href="#">política de privacidad</a>
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <div class="carousel">
+          <div class="images-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="image img-1 show" alt="" />
+            <img
+              src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="image img-2" alt="" />
+            <img
+              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="image img-3" alt="" />
+          </div>
+
+          <div class="text-slider">
+            <div class="text-wrap">
+              <div class="text-group">
+                <h2>Texto que pipe tiene que agregar</h2>
+                <h2>Texto que pipe tiene que agregar</h2>
+                <h2>Texto que pipe tiene que agregar</h2>
+              </div>
+            </div>
+
+            <div class="bullets">
+              <span class="active" data-value="1"></span>
+              <span data-value="2"></span>
+              <span data-value="3"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Javascript file -->
+
+  <script>
+    const inputs = document.querySelectorAll(".input-field");
+    const toggle_btn = document.querySelectorAll(".toggle");
+    const main = document.querySelector("main");
+    const bullets = document.querySelectorAll(".bullets span");
+    const images = document.querySelectorAll(".image");
+
+    inputs.forEach((inp) => {
+      inp.addEventListener("focus", () => {
+        inp.classList.add("active");
+      });
+      inp.addEventListener("blur", () => {
+        if (inp.value != "") return;
+        inp.classList.remove("active");
+      });
+    });
+
+    toggle_btn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        main.classList.toggle("sign-up-mode");
+      });
+    });
+
+    function moveSlider() {
+      let index = this.dataset.value;
+
+      let currentImage = document.querySelector(`.img-${index}`);
+      images.forEach((img) => img.classList.remove("show"));
+      currentImage.classList.add("show");
+
+      const textSlider = document.querySelector(".text-group");
+      textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+
+      bullets.forEach((bull) => bull.classList.remove("active"));
+      this.classList.add("active");
+    }
+
+    bullets.forEach((bullet) => {
+      bullet.addEventListener("click", moveSlider);
+    });
+
+
+  </script>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>

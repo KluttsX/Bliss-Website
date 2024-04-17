@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script type="module" src="firebase.js" defer></script>
+    <title>Bliss</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="assets/images/logo.svg">BLISS</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Inicio</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#app">Download</a></li>
+        </ul>
+        <div class="h-main">
+            <a href="login/login.html" class="h-btn" id="loginbtn">Acceder</a>
+            <!-- <div class="userIcon" id="userIcon">
+                <i class="bx bxs-user"></i>
+            </div> -->
+            <!-- <a href="#" class="h-btn2"><i class="bx bx-user"></i></a> -->
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- <div class="bx bx-moon" id="darkmode"></div> -->
+        </div>
+    </header>
+
+    <section class="hero" id="home" aria-label="home" data-section>
+        <section class="left">
+            <img src="assets/images/1.png" alt="Hero Illustration">
+        </section>
+        <section class="right" id="user-info">
+            <h1>Bliss</h1>
+            <p>Bienvenido a Bliss, tu compañero para prácticas ecoamigables. Encuentra fácilmente puntos de reciclaje,
+                aprende a separar residuos y mantente al tanto de la sostenibilidad con nuestro blog. !Únete para cuidar
+                juntos nuestro planeta!</p>
+            <a href="#app" class="btn-hero" id="readmore">LEER MÁS</a>
+        </section>
+    </section>
+
+    <section class="hero" id="features" aria-label="features" data-section>
+        <h2> Características</h2>
+        <div class="line">
+        </div>
+        <div class="wrapper">
+
+            <div class="single-service">
+                <div class="social">
+                    <i class="bx bx-map"></i>
+                </div>
+                <span></span>
+                <h3>Mapa de reciclaje</h3>
+                <p>
+                    Mapa interactivo con geolocalización para encontrar fácilmente puntos de reciclaje cercanos.
+                    Proporciona información actualizada, fomentando prácticas sostenibles y facilitando la adopción de
+                    hábitos de reciclaje.</p>
+            </div>
+            <div class="single-service">
+                <div class="social">
+                    <i class="bx bx-chat"></i>
+                </div>
+                <span></span>
+                <h3>Guía de Reciclaje:</h3>
+                <p>
+                    La aplicación guía sobre reciclaje para plástico, papel, vidrio y electrónicos, con instrucciones
+                    claras y consejos para la correcta separación de residuos, fomentando prácticas ecoamigables.</p>
+            </div>
+            <div class="single-service">
+                <div class="social">
+                    <i class="bx bx-news"></i>
+                </div>
+                <span></span>
+                <h3>Blog</h3>
+                <p>
+                    La app tiene un blog con info actualizada sobre sostenibilidad, medio ambiente, prácticas
+                    ecológicas, tecnologías de reciclaje y eventos. Motiva a los usuarios a cuidar el planeta al
+                    mantenerlos informados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="blog" aria-label="blog" data-section>
+        <div class="blog-heading">
+            <h3>Blog</h3>
+        </div>
+        <div class="blog-bar">
+            <p>Populares</p>
+            <a href="blog.html"><button id="ver-mas">Ver más</button></a>
+        </div>
+
+        <div class="blog-box-container">
+
+            <div class="blog-box">
+                <div class="blog-box-img">
+                    <img src="assets/images/reci.jpg">
+                    <a class="blog-img-link">
+                        <i class="bx bx-right-top-arrow-circle"></i>
+                    </a>
+                </div>
+                <div class="blog-box-text">
+                    <strong>¿COMO RECICLAR</strong>
+                    <a>EL CARTON? Y SUS USOS</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem illo nihil eveniet optio ut
+                        sapiente laborum, quidem autem cumque cupiditate explicabo omnis vitae odio sequi error magni,
+                        obcaecati accusamus suscipit?</p>
+                    <div class="blog-author">
+                        <div class="blog-author-img">
+                            <img src="assets/images/reci.jpg" alt="">
+                        </div>
+                        <div class="blog-author-text">
+                            <strong>Anderson J.</strong>
+                            <span>diciembre 13, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-box-img">
+                    <img src="assets/images/reci.jpg">
+                    <a class="blog-img-link">
+                        <i class="bx bx-right-top-arrow-circle"></i>
+                    </a>
+                </div>
+                <div class="blog-box-text">
+                    <strong>¿COMO RECICLAR</strong>
+                    <a>EL VIDRIO? Y SUS USOS</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem illo nihil eveniet optio ut
+                        sapiente laborum, quidem autem cumque cupiditate explicabo omnis vitae odio sequi error magni,
+                        obcaecati accusamus suscipit?</p>
+                    <div class="blog-author">
+                        <div class="blog-author-img">
+                            <img src="assets/images/reci.jpg" alt="">
+                        </div>
+                        <div class="blog-author-text">
+                            <strong>Anderson J.</strong>
+                            <span>diciembre 13, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-box-img">
+                    <img src="assets/images/reci.jpg">
+                    <a class="blog-img-link">
+                        <i class="bx bx-right-top-arrow-circle"></i>
+                    </a>
+                </div>
+                <div class="blog-box-text">
+                    <strong>¿COMO RECICLAR</strong>
+                    <a>EL PLASTICO? Y SUS USOS</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem illo nihil eveniet optio ut
+                        sapiente laborum, quidem autem cumque cupiditate explicabo omnis vitae odio sequi error magni,
+                        obcaecati accusamus suscipit?</p>
+                    <div class="blog-author">
+                        <div class="blog-author-img">
+                            <img src="assets/images/reci.jpg" alt="">
+                        </div>
+                        <div class="blog-author-text">
+                            <strong>Anderson J.</strong>
+                            <span>diciembre 13, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-box">
+                <div class="blog-box-img">
+                    <img src="assets/images/reci.jpg">
+                    <a class="blog-img-link">
+                        <i class="bx bx-right-top-arrow-circle"></i>
+                    </a>
+                </div>
+                <div class="blog-box-text">
+                    <strong>¿COMO RECICLAR</strong>
+                    <a>EL PLASTICO? Y SUS USOS</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem illo nihil eveniet optio ut
+                        sapiente laborum, quidem autem cumque cupiditate explicabo omnis vitae odio sequi error magni,
+                        obcaecati accusamus suscipit?</p>
+                    <div class="blog-author">
+                        <div class="blog-author-img">
+                            <img src="assets/images/reci.jpg" alt="">
+                        </div>
+                        <div class="blog-author-text">
+                            <strong>Anderson J.</strong>
+                            <span>diciembre 13, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero" id="app" aria-label="app" data-section>
+        <section class="left-app">
+            <img src="assets/images/2.png" alt="Hero Illustration">
+        </section>
+        <section class="right-app">
+            <h1>Bliss App</h1>
+            <p>Descarga Bliss tu guia ecoamigable. Encuentra puntos de reciclaje, aprende prácticas sostenibles y
+                mantente informado con nuestro blog. !Haz la diferencia ahora!</p>
+            <img class="btn-app" src="assets/images/play-store.png"></a>
+        </section>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a class="bx bxl-facebook"></a>
+                    <a class="bx bxl-instagram"></a>
+                    <a class="bx bxl-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Bliss.</b> creado con ♥ por  Overload.</small>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
